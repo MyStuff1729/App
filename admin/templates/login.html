@@ -1,0 +1,75 @@
+<div id="page-top" class="page-top">&nbsp;</div>
+
+<section id="account" class="section-product" ng-init="account.initView()">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h1>Admin Login</h1>
+            </div>
+        </div>
+        
+        <hr class="star-light">
+        
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-2 text-left">
+                <h2>1-4: Setup Admin Access</h2>
+                <p>
+                    At this point, we assume that you  have <a href="img/examples/example0.png" target="_blank">
+                        setup your Firebase account in index.html
+                    </a>
+                </p>
+                <p>
+                    If this is the first time you are visiting the
+                    <strong>Admin section</strong>, then please follow steps 1 to 5. 
+                    If you have completed these steps before, skip to step 6</p>
+                <p >
+                    <a href="img/examples/example1.png" target="_blank">
+                        1: Setup Email and Authentication
+                    </a>
+                </p>
+                <p>
+                    <a href="img/examples/example2.png" target="_blank">
+                        2: Whitelist your test and admin (this url) domains
+                    </a>
+                </p>
+                <p>
+                    <a href="img/examples/example3.png" target="_blank">
+                        3: Register yourself as a new user on Firebase
+                    </a>
+                </p>
+                <p>
+                    <a href="img/examples/example4.png" target="_blank">
+                        4: Specify the user with the Administrator rights
+                    </a>
+                </p>
+            </div>
+            
+            <div class="col-sm-4 col-sm-offset-1 text-left">
+                <h2>5: Sign in</h2>
+                <p>
+                    <input 
+                        class="submit-box-generic input-wide"
+                        placeholder="E-mail"
+                        type="email" ng-model="account.inputData.signIn.email">
+                    <input 
+                        class="submit-box-generic input-wide"
+                        placeholder="Password"
+                        type="password" ng-model="account.inputData.signIn.password">
+                </p>
+                <p>
+                    <button 
+                        class="btn-positive"
+                        ng-click="account.authWithEmail()">Sign in</button>
+                </p>
+                <p>
+                    {{account.inputData.signIn.message}}
+                </p>
+            </div>
+        </div>
+
+        
+    </div>
+</section>
+
+
